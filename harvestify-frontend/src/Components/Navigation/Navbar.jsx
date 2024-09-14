@@ -20,11 +20,11 @@ const Navbar = () => {
     const user = useSelector(store => store?.users);
     const { userAuth, appErr, serverErr, loading } = user;
     return (
-        <nav className="relative mx-auto p-6 dark:bg-slate-800 dark:text-white">
+        <nav className="relative max-w-screen mx-auto p-6 dark:bg-slate-800 dark:text-white">
             {/* flex container */}
-            <div className="flex items-center justify-between">
+            <div className="w-full flex items-center justify-between">
                 {/* container for all items */}
-                <div className="flex items-center space-x-20">
+                <div className="w-2/3 flex items-center justify-between">
                     {/* logo */}
                     <h1 className="font-bold text-black dark:text-white text-4xl">Harvestify</h1>
                     {/* container for menu items */}
