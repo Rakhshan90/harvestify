@@ -22,14 +22,14 @@ const ProductList = () => {
         <div className='min-h-screen mx-auto p-6 md:p-12 dark:bg-slate-800 dark:text-white'>
             <div className="flex gap-4 flex-wrap items-center justify-center md:items-start md:justify-start">
                 {loading ? (
-                    <div className='flex gap-4 flex-wrap items-center justify-center md:items-start md:justify-start'>
+                    <>
                         <ProductSkeleton />
                         <ProductSkeleton />
                         <ProductSkeleton />
                         <ProductSkeleton />
                         <ProductSkeleton />
                         <ProductSkeleton />
-                    </div>
+                    </>
                 ) : appErr || serverErr ? (
                     <div className='text-red-500'>{appErr} {serverErr}</div>
                 ) : products?.length <= 0 ? (
